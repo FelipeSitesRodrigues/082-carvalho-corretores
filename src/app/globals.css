@@ -1,0 +1,501 @@
+/* ==========================================================================
+   Carvalho Corretores (082) · base
+   Tokens, reset, tipografia, botões e utilidades. O resto mora no .module.css
+   de cada componente.
+   ========================================================================== */
+
+:root {
+  /* paleta (prompt-mockup.md, conferida no mockup aprovado) */
+  --preto: #0b0d0e;
+  --carvao: #15191b;
+  --grafite: #262c2f;
+  --cinza-claro: #a7b0b5;
+  --branco: #ffffff;
+  --gelo: #f4f6f7;
+  --cinza-medio: #5a6469;
+  --fio: #e1e6e8;
+  --ciano: #2aa4c9;
+  --ciano-escuro: #1b7e9c;
+  --ciano-hover: #3db3d6;
+  --verde: #25d366;
+  --verde-hover: #3ddc7a;
+
+  /* ritmo */
+  --container: 1280px;
+  --gutter: clamp(20px, 5.6vw, 80px);
+  --secao-y: clamp(72px, 8.2vw, 120px);
+  --raio-card: 10px;
+  --raio-botao: 10px;
+  --raio-campo: 8px;
+
+  /* movimento */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-suave: cubic-bezier(0.33, 1, 0.68, 1);
+  --rapido: 160ms;
+  --medio: 280ms;
+  --lento: 640ms;
+
+  --sombra-card: 0 1px 2px rgb(11 13 14 / 0.04), 0 8px 24px -16px rgb(11 13 14 / 0.18);
+  --sombra-card-alta: 0 2px 4px rgb(11 13 14 / 0.05), 0 22px 40px -22px rgb(11 13 14 / 0.32);
+
+  --fonte-display: var(--font-sora), 'Segoe UI', system-ui, sans-serif;
+  /* Texto corrido na sans do sistema (Roboto no Android, SF no iPhone, Segoe no
+     Windows): mesma família de sans limpa do mockup, sem os 48 KB da Inter
+     disputando banda com a foto do topo (o LCP simulado soma tudo). */
+  --fonte-texto: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  color-scheme: light;
+  accent-color: var(--ciano-escuro);
+}
+
+/* --------------------------------------------------------------- reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 88px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  min-height: 100svh;
+  background: var(--gelo);
+  color: var(--preto);
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+input,
+button,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fonte-display);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* ------------------------------------------------- superfícies do navegador */
+::selection {
+  background: var(--ciano);
+  color: var(--preto);
+}
+:focus-visible {
+  outline: 2px solid var(--ciano);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.claro :focus-visible,
+.sobre-ciano :focus-visible {
+  outline-color: var(--preto);
+}
+html {
+  scrollbar-color: var(--grafite) var(--preto);
+}
+
+/* ----------------------------------------------------------------- layout */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.secao {
+  padding-block: var(--secao-y);
+}
+.escuro {
+  background: var(--preto);
+  color: var(--branco);
+}
+.claro {
+  background: var(--gelo);
+  color: var(--preto);
+}
+.sobre-ciano {
+  background: var(--ciano);
+  color: var(--preto);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.pular {
+  position: fixed;
+  left: 16px;
+  top: 12px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: var(--raio-botao);
+  background: var(--ciano);
+  color: var(--preto);
+  font-weight: 600;
+  transform: translateY(-160%);
+  transition: transform var(--medio) var(--ease-out);
+}
+.pular:focus-visible {
+  transform: none;
+}
+
+/* ------------------------------------------- cabeçalho de seção (rótulo + título) */
+.rotulo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-family: var(--fonte-texto);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ciano-escuro);
+}
+.escuro .rotulo {
+  color: var(--ciano);
+}
+.sobre-ciano .rotulo {
+  color: var(--preto);
+}
+/* o telhado do logo, em ponto pequeno */
+.rotulo::before {
+  content: '';
+  width: 16px;
+  height: 9px;
+  flex: none;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Cpath d='M1.4 8.2 8 2.6l6.6 5.6' fill='none' stroke='%23000' stroke-width='2.6' stroke-linejoin='miter' stroke-miterlimit='10'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Cpath d='M1.4 8.2 8 2.6l6.6 5.6' fill='none' stroke='%23000' stroke-width='2.6' stroke-linejoin='miter' stroke-miterlimit='10'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.escuro .rotulo::before,
+.claro .rotulo::before {
+  background: var(--ciano);
+}
+.claro .rotulo::before {
+  background: var(--ciano-escuro);
+}
+
+.titulo-secao {
+  font-size: clamp(1.75rem, 2.9vw, 2.75rem);
+  text-transform: uppercase;
+}
+.destaque {
+  color: var(--ciano-escuro);
+}
+.escuro .destaque {
+  color: var(--ciano);
+}
+
+.cabeca-secao {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px 40px;
+  flex-wrap: wrap;
+  margin-bottom: clamp(32px, 3.6vw, 48px);
+}
+.cabeca-secao p {
+  margin-top: 12px;
+  color: var(--cinza-medio);
+  font-size: 1.0625rem;
+}
+.escuro .cabeca-secao p {
+  color: var(--cinza-claro);
+}
+
+/* link "Ver todos os imóveis →" */
+.link-seta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--ciano-escuro);
+  background: linear-gradient(currentColor, currentColor) left bottom / 100% 2px no-repeat;
+  transition: background-size var(--medio) var(--ease-out), color var(--rapido);
+}
+.link-seta svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--medio) var(--ease-out);
+}
+@media (hover: hover) {
+  .link-seta:hover {
+    background-size: 60% 2px;
+  }
+  .link-seta:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+/* ----------------------------------------------------------------- botões */
+.botao {
+  --altura: 56px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: var(--altura);
+  padding: 0 28px;
+  border-radius: var(--raio-botao);
+  font-family: var(--fonte-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  border: 1.5px solid transparent;
+  transition:
+    background-color var(--medio) var(--ease-suave),
+    border-color var(--medio) var(--ease-suave),
+    color var(--medio) var(--ease-suave),
+    transform var(--rapido) var(--ease-out),
+    box-shadow var(--medio) var(--ease-suave);
+  -webkit-tap-highlight-color: transparent;
+}
+.botao svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+.botao .seta {
+  transition: transform var(--medio) var(--ease-out);
+}
+.botao:active {
+  transform: scale(0.98);
+}
+.botao[disabled],
+.botao[aria-disabled='true'] {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.botao-ciano {
+  background: var(--ciano);
+  color: var(--preto);
+}
+.botao-verde {
+  background: var(--verde);
+  color: var(--preto);
+}
+.botao-preto {
+  background: var(--preto);
+  color: var(--branco);
+}
+.botao-contorno {
+  border-color: currentColor;
+  color: var(--branco);
+}
+.claro .botao-contorno {
+  color: var(--preto);
+}
+
+@media (hover: hover) {
+  .botao-ciano:hover {
+    background: var(--ciano-hover);
+    box-shadow: 0 12px 28px -14px rgb(42 164 201 / 0.9);
+  }
+  .botao-verde:hover {
+    background: var(--verde-hover);
+    box-shadow: 0 12px 28px -14px rgb(37 211 102 / 0.9);
+  }
+  .botao-preto:hover {
+    background: #1d2326;
+  }
+  .botao-contorno:hover {
+    background: rgb(255 255 255 / 0.08);
+  }
+  .claro .botao-contorno:hover {
+    background: rgb(11 13 14 / 0.05);
+  }
+  .botao:hover .seta {
+    transform: translateX(4px);
+  }
+}
+
+/* ------------------------------------------------------ campos de formulário */
+.campo {
+  display: grid;
+  gap: 8px;
+}
+.campo > span {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.entrada {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px;
+  border-radius: var(--raio-campo);
+  border: 1px solid var(--fio);
+  background: var(--branco);
+  color: var(--preto);
+  font-size: 1rem;
+  transition: border-color var(--rapido), box-shadow var(--medio) var(--ease-suave);
+}
+.entrada::placeholder {
+  color: #7b858a;
+}
+.entrada:hover {
+  border-color: #c5cdd1;
+}
+.entrada:focus-visible {
+  outline: none;
+  border-color: var(--ciano-escuro);
+  box-shadow: 0 0 0 4px rgb(42 164 201 / 0.22);
+}
+.entrada[aria-invalid='true'] {
+  border-color: #b3261e;
+  box-shadow: 0 0 0 4px rgb(179 38 30 / 0.12);
+}
+select.entrada {
+  appearance: none;
+  padding-right: 44px;
+  background: var(--branco)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b0d0e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    right 14px center / 18px no-repeat;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------- revelação no scroll
+   O padrão é VISÍVEL. Só esconde quando o JS marcou <html class="js"> e o
+   visitante não pediu menos movimento. Parado, esconde SÓ com opacidade (o
+   Chrome conta clip-path no IntersectionObserver e a foto nunca apareceria). */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-revela] {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    transition:
+      opacity 720ms var(--ease-out),
+      transform 900ms var(--ease-out);
+    transition-delay: calc(var(--i, 0) * 70ms);
+  }
+  .js [data-revela].visivel {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------- WhatsApp flutuante */
+.zap-flutuante {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--verde);
+  color: var(--preto);
+  box-shadow: 0 14px 30px -10px rgb(0 0 0 / 0.5), 0 6px 18px -8px rgb(37 211 102 / 0.7);
+  opacity: 0;
+  transform: translate3d(0, 16px, 0) scale(0.7);
+  pointer-events: none;
+  transition:
+    transform 520ms var(--ease-out),
+    opacity var(--medio) var(--ease-suave),
+    box-shadow var(--medio);
+}
+.zap-flutuante svg {
+  width: 30px;
+  height: 30px;
+}
+.zap-flutuante[data-visivel] {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+@media (hover: hover) {
+  .zap-flutuante[data-visivel]:hover {
+    transform: translate3d(0, -2px, 0) scale(1.05);
+  }
+}
+
+/* ------------------------------------------------ content-visibility
+   As seções abaixo da dobra não entram no primeiro layout (era 233 ms com a CPU
+   4x, antes de pintar o hero). A altura reservada é a do CONTEÚDO medido, sem
+   o padding (memória content-visibility-altura-sem-padding), e o "auto" guarda
+   a altura real depois da primeira vez. No primeiro clique num link com "#"
+   (ou chegando com "#" no endereço), html.cv-pronto desenha tudo antes de
+   rolar, senão a âncora para no lugar errado (memória content-visibility-ancoras). */
+.cv {
+  content-visibility: auto;
+  contain-intrinsic-size: auto var(--cv-d, 600px);
+}
+@media (max-width: 1099px) {
+  .cv {
+    contain-intrinsic-size: auto var(--cv-t, 700px);
+  }
+}
+@media (max-width: 640px) {
+  .cv {
+    contain-intrinsic-size: auto var(--cv-m, 800px);
+  }
+}
+html.cv-pronto .cv {
+  content-visibility: visible;
+}
+
+/* fotos adiadas entram com fade quando chegam (ver Foto.tsx) */
+img[data-adiar] {
+  opacity: 0;
+  transition: opacity 600ms var(--ease-suave);
+}
+img[data-adiar].carregou {
+  opacity: 1;
+}

@@ -1,0 +1,108 @@
+.trilho {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(12px, 1.4vw, 18px);
+}
+.trilho > li {
+  min-width: 0;
+}
+.card {
+  position: relative;
+  display: block;
+  aspect-ratio: 6 / 5;
+  overflow: hidden;
+  border-radius: var(--raio-card);
+  background: #cfd8dc;
+  color: var(--branco);
+  isolation: isolate;
+}
+.foto,
+.foto img {
+  width: 100%;
+  height: 100%;
+}
+.foto img {
+  object-fit: cover;
+  transition: transform 1100ms var(--ease-out);
+}
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(11 13 14 / 0.86) 0%, rgb(11 13 14 / 0.35) 34%, rgb(11 13 14 / 0) 58%);
+}
+.nome {
+  position: absolute;
+  left: 16px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--fonte-display);
+  font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.nome svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--ciano);
+  opacity: 0;
+  transform: translate3d(-6px, 0, 0);
+  transition:
+    opacity var(--medio),
+    transform var(--medio) var(--ease-out);
+}
+@media (hover: hover) {
+  .card:hover .foto img {
+    transform: scale(1.06);
+  }
+  .card:hover .nome svg {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 1099px) and (min-width: 641px) {
+  .trilho {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .trilho {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 44%;
+    gap: 12px;
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 2px var(--gutter) 6px;
+    scroll-padding-inline: var(--gutter);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .trilho::-webkit-scrollbar {
+    display: none;
+  }
+  .trilho > li {
+    scroll-snap-align: start;
+  }
+  /* no carrossel o card de fora da tela só "entraria" no meio do deslize: nasce visível */
+  :global(.js) .trilho > li[data-revela] {
+    opacity: 1;
+    transform: none;
+  }
+  .card {
+    aspect-ratio: 4 / 5;
+  }
+  .nome svg {
+    opacity: 1;
+    transform: none;
+  }
+}

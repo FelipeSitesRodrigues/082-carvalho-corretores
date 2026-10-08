@@ -1,0 +1,29 @@
+{
+  "name": "carvalho-corretores",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "imagens": "node scripts/processar-imagens.mjs",
+    "revisar": "node scripts/revisar.mjs",
+    "print": "node scripts/print.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.117.3",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "puppeteer-core": "^25.9.0",
+    "sharp": "^0.35.4",
+    "typescript": "^5"
+  }
+}

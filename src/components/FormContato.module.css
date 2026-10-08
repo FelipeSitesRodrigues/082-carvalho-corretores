@@ -1,0 +1,91 @@
+/* altura reservada = form montado, pra nada pular quando ele entra */
+.lugar {
+  min-height: 384px;
+}
+.form {
+  display: grid;
+  gap: 14px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .form,
+  .enviado {
+    animation: aparecer 520ms var(--ease-out) both;
+  }
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+}
+.titulo {
+  margin-bottom: 4px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+.form :global(.campo) > span:not(:global(.sr-only)) {
+  margin-top: 2px;
+  font-size: 0.8125rem;
+  color: var(--cinza-medio);
+  font-weight: 500;
+}
+.form :global(.entrada) {
+  background-color: #f8fafb;
+}
+.form :global(.botao) {
+  width: 100%;
+  margin-top: 4px;
+}
+.erro {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #b3261e;
+}
+.lgpd {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--cinza-medio);
+  text-align: center;
+}
+.lgpd a {
+  color: var(--ciano-escuro);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.enviado {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  padding-top: 8px;
+  color: var(--cinza-medio);
+}
+.enviado p {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+.ok {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgb(42 164 201 / 0.14);
+  color: var(--ciano-escuro);
+  stroke-width: 2.2;
+}
+.enviado .titulo {
+  color: var(--preto);
+}
+.denovo {
+  margin-top: 6px;
+  font-weight: 600;
+  color: var(--ciano-escuro);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.semJs {
+  font-size: 0.9375rem;
+  color: var(--cinza-medio);
+}

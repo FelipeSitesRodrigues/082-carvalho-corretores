@@ -1,0 +1,205 @@
+/* ---------------------------------------------------------- bloco de busca */
+.busca,
+.buscaReserva {
+  position: relative;
+  z-index: 2;
+  margin-top: -64px;
+  border-radius: 12px;
+  background: var(--branco);
+  border: 1px solid var(--fio);
+  box-shadow: 0 30px 60px -38px rgb(11 13 14 / 0.5), 0 2px 6px rgb(11 13 14 / 0.04);
+}
+.busca {
+  padding: 18px clamp(18px, 2vw, 26px) clamp(20px, 2vw, 26px);
+}
+.buscaReserva {
+  height: 172px;
+}
+.abas {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--gelo);
+}
+.aba {
+  min-height: 40px;
+  padding: 0 18px;
+  border-radius: 7px;
+  font-family: var(--fonte-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cinza-medio);
+  transition:
+    background-color var(--medio) var(--ease-suave),
+    color var(--medio),
+    box-shadow var(--medio);
+}
+.aba[aria-checked='true'] {
+  background: var(--preto);
+  color: var(--branco);
+  box-shadow: 0 6px 14px -8px rgb(11 13 14 / 0.6);
+}
+@media (hover: hover) {
+  .aba[aria-checked='false']:hover {
+    color: var(--preto);
+  }
+}
+.campos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  align-items: end;
+  gap: 14px;
+  margin-top: 16px;
+}
+.campo {
+  display: grid;
+  gap: 6px;
+}
+.campo > span,
+.ordem > span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cinza-medio);
+}
+.campo :global(.entrada) {
+  background-color: #f8fafb;
+}
+.campo :global(.entrada:disabled) {
+  color: #8a9398;
+  cursor: not-allowed;
+}
+.buscar:global(.botao) {
+  --altura: 52px;
+}
+
+/* --------------------------------------------------------- barra de resultado */
+.barra {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: clamp(36px, 4vw, 52px) 0 22px;
+  scroll-margin-top: 104px;
+}
+.contagem {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  color: var(--cinza-medio);
+}
+.contagem strong {
+  font-family: var(--fonte-display);
+  font-size: 1.5rem;
+  color: var(--preto);
+}
+.limpar {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ciano-escuro);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ordem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ordem :global(.entrada) {
+  width: auto;
+  min-height: 44px;
+}
+
+/* ------------------------------------------------------------------- grade */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+}
+.grade > li {
+  min-width: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .grade > li {
+    animation: entrar 620ms var(--ease-out) both;
+    animation-delay: calc(var(--i) * 45ms);
+  }
+}
+@keyframes entrar {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+}
+
+/* --------------------------------------------------------------- vazio */
+.vazio {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: clamp(40px, 6vw, 72px) 20px;
+  border-radius: 12px;
+  border: 1px dashed #c9d1d5;
+  text-align: center;
+}
+.vazio h2 {
+  font-size: 1.375rem;
+  letter-spacing: -0.015em;
+}
+.vazio p {
+  max-width: 30rem;
+  color: var(--cinza-medio);
+}
+.vazioIcone {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  border-radius: 50%;
+  background: rgb(42 164 201 / 0.14);
+  color: var(--ciano-escuro);
+}
+.vazioBotoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1099px) {
+  .grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .campos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .buscar:global(.botao) {
+    grid-column: 1 / -1;
+  }
+  .buscaReserva {
+    height: 300px;
+  }
+}
+@media (max-width: 640px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+  .abas {
+    display: flex;
+  }
+  .aba {
+    flex: 1;
+  }
+  .campos {
+    gap: 12px;
+  }
+  .ordem {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "hero/desktop": [
+    {
+      "src": "/img/hero/desktop-1672.webp",
+      "largura": 1672,
+      "altura": 941,
+      "alt": "Sala de estar de apartamento no fim da tarde, com varanda envidraçada e vista para a cidade",
+      "srcSetWebp": "/img/hero/desktop-960.webp 960w, /img/hero/desktop-1280.webp 1280w, /img/hero/desktop-1672.webp 1672w",
+      "srcSetAvif": "/img/hero/desktop-960.avif 960w, /img/hero/desktop-1280.avif 1280w, /img/hero/desktop-1672.avif 1672w"
+    }
+  ],
+  "hero/mobile": [
+    {
+      "src": "/img/hero/mobile-941.webp",
+      "largura": 941,
+      "altura": 1176,
+      "alt": "Sala de estar de apartamento no fim da tarde, com varanda envidraçada e vista para a cidade",
+      "srcSetWebp": "/img/hero/mobile-480.webp 480w, /img/hero/mobile-800.webp 800w, /img/hero/mobile-941.webp 941w",
+      "srcSetAvif": "/img/hero/mobile-480.avif 480w, /img/hero/mobile-800.avif 800w, /img/hero/mobile-941.avif 941w"
+    }
+  ],
+  "imoveis/01-apto-centro": [
+    {
+      "src": "/img/imoveis/01-apto-centro-1-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Quarto de casal claro com cama arrumada, tons bege e janelas amplas com vista da cidade",
+      "srcSetWebp": "/img/imoveis/01-apto-centro-1-480.webp 480w, /img/imoveis/01-apto-centro-1-800.webp 800w, /img/imoveis/01-apto-centro-1-1200.webp 1200w, /img/imoveis/01-apto-centro-1-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/01-apto-centro-1-480.avif 480w, /img/imoveis/01-apto-centro-1-800.avif 800w, /img/imoveis/01-apto-centro-1-1200.avif 1200w, /img/imoveis/01-apto-centro-1-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/01-apto-centro-2-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Sala de estar com sofá cinza, poltrona e janelas amplas",
+      "srcSetWebp": "/img/imoveis/01-apto-centro-2-480.webp 480w, /img/imoveis/01-apto-centro-2-800.webp 800w, /img/imoveis/01-apto-centro-2-1200.webp 1200w, /img/imoveis/01-apto-centro-2-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/01-apto-centro-2-480.avif 480w, /img/imoveis/01-apto-centro-2-800.avif 800w, /img/imoveis/01-apto-centro-2-1200.avif 1200w, /img/imoveis/01-apto-centro-2-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/01-apto-centro-3-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Cozinha com armários de madeira e bancada escura, integrada à sala",
+      "srcSetWebp": "/img/imoveis/01-apto-centro-3-480.webp 480w, /img/imoveis/01-apto-centro-3-800.webp 800w, /img/imoveis/01-apto-centro-3-1200.webp 1200w, /img/imoveis/01-apto-centro-3-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/01-apto-centro-3-480.avif 480w, /img/imoveis/01-apto-centro-3-800.avif 800w, /img/imoveis/01-apto-centro-3-1200.avif 1200w, /img/imoveis/01-apto-centro-3-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/01-apto-centro-4-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Banheiro com bancada de mármore bege e gabinete de madeira",
+      "srcSetWebp": "/img/imoveis/01-apto-centro-4-480.webp 480w, /img/imoveis/01-apto-centro-4-800.webp 800w, /img/imoveis/01-apto-centro-4-1200.webp 1200w, /img/imoveis/01-apto-centro-4-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/01-apto-centro-4-480.avif 480w, /img/imoveis/01-apto-centro-4-800.avif 800w, /img/imoveis/01-apto-centro-4-1200.avif 1200w, /img/imoveis/01-apto-centro-4-1600.avif 1600w"
+    }
+  ],
+  "imoveis/02-apto-vila-perracini": [
+    {
+      "src": "/img/imoveis/02-apto-vila-perracini-1-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Cozinha integrada com armários brancos e mesa redonda pequena",
+      "srcSetWebp": "/img/imoveis/02-apto-vila-perracini-1-480.webp 480w, /img/imoveis/02-apto-vila-perracini-1-800.webp 800w, /img/imoveis/02-apto-vila-perracini-1-1200.webp 1200w, /img/imoveis/02-apto-vila-perracini-1-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/02-apto-vila-perracini-1-480.avif 480w, /img/imoveis/02-apto-vila-perracini-1-800.avif 800w, /img/imoveis/02-apto-vila-perracini-1-1200.avif 1200w, /img/imoveis/02-apto-vila-perracini-1-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/02-apto-vila-perracini-2-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Sala de estar com sofá escuro, mesa de centro e parede verde-clara",
+      "srcSetWebp": "/img/imoveis/02-apto-vila-perracini-2-480.webp 480w, /img/imoveis/02-apto-vila-perracini-2-800.webp 800w, /img/imoveis/02-apto-vila-perracini-2-1200.webp 1200w, /img/imoveis/02-apto-vila-perracini-2-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/02-apto-vila-perracini-2-480.avif 480w, /img/imoveis/02-apto-vila-perracini-2-800.avif 800w, /img/imoveis/02-apto-vila-perracini-2-1200.avif 1200w, /img/imoveis/02-apto-vila-perracini-2-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/02-apto-vila-perracini-3-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Quarto com cama de casal, roupa de cama clara e armário espelhado",
+      "srcSetWebp": "/img/imoveis/02-apto-vila-perracini-3-480.webp 480w, /img/imoveis/02-apto-vila-perracini-3-800.webp 800w, /img/imoveis/02-apto-vila-perracini-3-1200.webp 1200w, /img/imoveis/02-apto-vila-perracini-3-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/02-apto-vila-perracini-3-480.avif 480w, /img/imoveis/02-apto-vila-perracini-3-800.avif 800w, /img/imoveis/02-apto-vila-perracini-3-1200.avif 1200w, /img/imoveis/02-apto-vila-perracini-3-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/02-apto-vila-perracini-4-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Varanda pequena com mesa, duas cadeiras e vasos de plantas",
+      "srcSetWebp": "/img/imoveis/02-apto-vila-perracini-4-480.webp 480w, /img/imoveis/02-apto-vila-perracini-4-800.webp 800w, /img/imoveis/02-apto-vila-perracini-4-1200.webp 1200w, /img/imoveis/02-apto-vila-perracini-4-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/02-apto-vila-perracini-4-480.avif 480w, /img/imoveis/02-apto-vila-perracini-4-800.avif 800w, /img/imoveis/02-apto-vila-perracini-4-1200.avif 1200w, /img/imoveis/02-apto-vila-perracini-4-1600.avif 1600w"
+    }
+  ],
+  "imoveis/03-casa-calmon-viana": [
+    {
+      "src": "/img/imoveis/03-casa-calmon-viana-1-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Fachada de casa térrea moderna com garagem e gramado na frente",
+      "srcSetWebp": "/img/imoveis/03-casa-calmon-viana-1-480.webp 480w, /img/imoveis/03-casa-calmon-viana-1-800.webp 800w, /img/imoveis/03-casa-calmon-viana-1-1200.webp 1200w, /img/imoveis/03-casa-calmon-viana-1-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/03-casa-calmon-viana-1-480.avif 480w, /img/imoveis/03-casa-calmon-viana-1-800.avif 800w, /img/imoveis/03-casa-calmon-viana-1-1200.avif 1200w, /img/imoveis/03-casa-calmon-viana-1-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/03-casa-calmon-viana-2-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Sala de estar com sofá, tapete e janela",
+      "srcSetWebp": "/img/imoveis/03-casa-calmon-viana-2-480.webp 480w, /img/imoveis/03-casa-calmon-viana-2-800.webp 800w, /img/imoveis/03-casa-calmon-viana-2-1200.webp 1200w, /img/imoveis/03-casa-calmon-viana-2-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/03-casa-calmon-viana-2-480.avif 480w, /img/imoveis/03-casa-calmon-viana-2-800.avif 800w, /img/imoveis/03-casa-calmon-viana-2-1200.avif 1200w, /img/imoveis/03-casa-calmon-viana-2-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/03-casa-calmon-viana-3-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Cozinha branca com bancada de madeira e eletrodomésticos de inox",
+      "srcSetWebp": "/img/imoveis/03-casa-calmon-viana-3-480.webp 480w, /img/imoveis/03-casa-calmon-viana-3-800.webp 800w, /img/imoveis/03-casa-calmon-viana-3-1200.webp 1200w, /img/imoveis/03-casa-calmon-viana-3-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/03-casa-calmon-viana-3-480.avif 480w, /img/imoveis/03-casa-calmon-viana-3-800.avif 800w, /img/imoveis/03-casa-calmon-viana-3-1200.avif 1200w, /img/imoveis/03-casa-calmon-viana-3-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/03-casa-calmon-viana-4-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Quarto de casal com paredes brancas e janela",
+      "srcSetWebp": "/img/imoveis/03-casa-calmon-viana-4-480.webp 480w, /img/imoveis/03-casa-calmon-viana-4-800.webp 800w, /img/imoveis/03-casa-calmon-viana-4-1200.webp 1200w, /img/imoveis/03-casa-calmon-viana-4-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/03-casa-calmon-viana-4-480.avif 480w, /img/imoveis/03-casa-calmon-viana-4-800.avif 800w, /img/imoveis/03-casa-calmon-viana-4-1200.avif 1200w, /img/imoveis/03-casa-calmon-viana-4-1600.avif 1600w"
+    }
+  ],
+  "imoveis/04-apto-vila-julia": [
+    {
+      "src": "/img/imoveis/04-apto-vila-julia-1-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Sala de estar com sofá, poltronas e janela ampla com luz natural",
+      "srcSetWebp": "/img/imoveis/04-apto-vila-julia-1-480.webp 480w, /img/imoveis/04-apto-vila-julia-1-800.webp 800w, /img/imoveis/04-apto-vila-julia-1-1200.webp 1200w, /img/imoveis/04-apto-vila-julia-1-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/04-apto-vila-julia-1-480.avif 480w, /img/imoveis/04-apto-vila-julia-1-800.avif 800w, /img/imoveis/04-apto-vila-julia-1-1200.avif 1200w, /img/imoveis/04-apto-vila-julia-1-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/04-apto-vila-julia-2-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Quarto de casal com cabeceira estofada e janela grande",
+      "srcSetWebp": "/img/imoveis/04-apto-vila-julia-2-480.webp 480w, /img/imoveis/04-apto-vila-julia-2-800.webp 800w, /img/imoveis/04-apto-vila-julia-2-1200.webp 1200w, /img/imoveis/04-apto-vila-julia-2-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/04-apto-vila-julia-2-480.avif 480w, /img/imoveis/04-apto-vila-julia-2-800.avif 800w, /img/imoveis/04-apto-vila-julia-2-1200.avif 1200w, /img/imoveis/04-apto-vila-julia-2-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/04-apto-vila-julia-3-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Cozinha branca integrada com mesa de jantar de madeira",
+      "srcSetWebp": "/img/imoveis/04-apto-vila-julia-3-480.webp 480w, /img/imoveis/04-apto-vila-julia-3-800.webp 800w, /img/imoveis/04-apto-vila-julia-3-1200.webp 1200w, /img/imoveis/04-apto-vila-julia-3-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/04-apto-vila-julia-3-480.avif 480w, /img/imoveis/04-apto-vila-julia-3-800.avif 800w, /img/imoveis/04-apto-vila-julia-3-1200.avif 1200w, /img/imoveis/04-apto-vila-julia-3-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/04-apto-vila-julia-4-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Banheiro branco com banheira, vaso e gabinete",
+      "srcSetWebp": "/img/imoveis/04-apto-vila-julia-4-480.webp 480w, /img/imoveis/04-apto-vila-julia-4-800.webp 800w, /img/imoveis/04-apto-vila-julia-4-1200.webp 1200w, /img/imoveis/04-apto-vila-julia-4-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/04-apto-vila-julia-4-480.avif 480w, /img/imoveis/04-apto-vila-julia-4-800.avif 800w, /img/imoveis/04-apto-vila-julia-4-1200.avif 1200w, /img/imoveis/04-apto-vila-julia-4-1600.avif 1600w"
+    }
+  ],
+  "imoveis/05-apto-centro-varanda": [
+    {
+      "src": "/img/imoveis/05-apto-centro-varanda-1-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Varanda com churrasqueira, conjunto de estofados e vista para a cidade",
+      "srcSetWebp": "/img/imoveis/05-apto-centro-varanda-1-480.webp 480w, /img/imoveis/05-apto-centro-varanda-1-800.webp 800w, /img/imoveis/05-apto-centro-varanda-1-1200.webp 1200w, /img/imoveis/05-apto-centro-varanda-1-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/05-apto-centro-varanda-1-480.avif 480w, /img/imoveis/05-apto-centro-varanda-1-800.avif 800w, /img/imoveis/05-apto-centro-varanda-1-1200.avif 1200w, /img/imoveis/05-apto-centro-varanda-1-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/05-apto-centro-varanda-2-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Sala de estar com sofá branco, TV e janela com vista para árvores",
+      "srcSetWebp": "/img/imoveis/05-apto-centro-varanda-2-480.webp 480w, /img/imoveis/05-apto-centro-varanda-2-800.webp 800w, /img/imoveis/05-apto-centro-varanda-2-1200.webp 1200w, /img/imoveis/05-apto-centro-varanda-2-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/05-apto-centro-varanda-2-480.avif 480w, /img/imoveis/05-apto-centro-varanda-2-800.avif 800w, /img/imoveis/05-apto-centro-varanda-2-1200.avif 1200w, /img/imoveis/05-apto-centro-varanda-2-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/05-apto-centro-varanda-3-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Suíte com cama de casal, escrivaninha e piso de madeira",
+      "srcSetWebp": "/img/imoveis/05-apto-centro-varanda-3-480.webp 480w, /img/imoveis/05-apto-centro-varanda-3-800.webp 800w, /img/imoveis/05-apto-centro-varanda-3-1200.webp 1200w, /img/imoveis/05-apto-centro-varanda-3-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/05-apto-centro-varanda-3-480.avif 480w, /img/imoveis/05-apto-centro-varanda-3-800.avif 800w, /img/imoveis/05-apto-centro-varanda-3-1200.avif 1200w, /img/imoveis/05-apto-centro-varanda-3-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/05-apto-centro-varanda-4-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Cozinha branca com ilha central e janelas amplas",
+      "srcSetWebp": "/img/imoveis/05-apto-centro-varanda-4-480.webp 480w, /img/imoveis/05-apto-centro-varanda-4-800.webp 800w, /img/imoveis/05-apto-centro-varanda-4-1200.webp 1200w, /img/imoveis/05-apto-centro-varanda-4-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/05-apto-centro-varanda-4-480.avif 480w, /img/imoveis/05-apto-centro-varanda-4-800.avif 800w, /img/imoveis/05-apto-centro-varanda-4-1200.avif 1200w, /img/imoveis/05-apto-centro-varanda-4-1600.avif 1600w"
+    }
+  ],
+  "imoveis/06-apto-jardim-america": [
+    {
+      "src": "/img/imoveis/06-apto-jardim-america-1-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Cozinha planejada branca com armários de madeira clara",
+      "srcSetWebp": "/img/imoveis/06-apto-jardim-america-1-480.webp 480w, /img/imoveis/06-apto-jardim-america-1-800.webp 800w, /img/imoveis/06-apto-jardim-america-1-1200.webp 1200w, /img/imoveis/06-apto-jardim-america-1-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/06-apto-jardim-america-1-480.avif 480w, /img/imoveis/06-apto-jardim-america-1-800.avif 800w, /img/imoveis/06-apto-jardim-america-1-1200.avif 1200w, /img/imoveis/06-apto-jardim-america-1-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/06-apto-jardim-america-2-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Sala de estar com sofá claro, mesa de centro de madeira e janela",
+      "srcSetWebp": "/img/imoveis/06-apto-jardim-america-2-480.webp 480w, /img/imoveis/06-apto-jardim-america-2-800.webp 800w, /img/imoveis/06-apto-jardim-america-2-1200.webp 1200w, /img/imoveis/06-apto-jardim-america-2-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/06-apto-jardim-america-2-480.avif 480w, /img/imoveis/06-apto-jardim-america-2-800.avif 800w, /img/imoveis/06-apto-jardim-america-2-1200.avif 1200w, /img/imoveis/06-apto-jardim-america-2-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/06-apto-jardim-america-3-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Quarto com cama de casal e parede azul-clara",
+      "srcSetWebp": "/img/imoveis/06-apto-jardim-america-3-480.webp 480w, /img/imoveis/06-apto-jardim-america-3-800.webp 800w, /img/imoveis/06-apto-jardim-america-3-1200.webp 1200w, /img/imoveis/06-apto-jardim-america-3-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/06-apto-jardim-america-3-480.avif 480w, /img/imoveis/06-apto-jardim-america-3-800.avif 800w, /img/imoveis/06-apto-jardim-america-3-1200.avif 1200w, /img/imoveis/06-apto-jardim-america-3-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/06-apto-jardim-america-4-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Banheiro com banheira, pia sobre gabinete branco e revestimento claro",
+      "srcSetWebp": "/img/imoveis/06-apto-jardim-america-4-480.webp 480w, /img/imoveis/06-apto-jardim-america-4-800.webp 800w, /img/imoveis/06-apto-jardim-america-4-1200.webp 1200w, /img/imoveis/06-apto-jardim-america-4-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/06-apto-jardim-america-4-480.avif 480w, /img/imoveis/06-apto-jardim-america-4-800.avif 800w, /img/imoveis/06-apto-jardim-america-4-1200.avif 1200w, /img/imoveis/06-apto-jardim-america-4-1600.avif 1600w"
+    }
+  ],
+  "imoveis/07-apto-vila-amelia": [
+    {
+      "src": "/img/imoveis/07-apto-vila-amelia-1-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Quarto de casal claro com janela grande e planta",
+      "srcSetWebp": "/img/imoveis/07-apto-vila-amelia-1-480.webp 480w, /img/imoveis/07-apto-vila-amelia-1-800.webp 800w, /img/imoveis/07-apto-vila-amelia-1-1200.webp 1200w, /img/imoveis/07-apto-vila-amelia-1-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/07-apto-vila-amelia-1-480.avif 480w, /img/imoveis/07-apto-vila-amelia-1-800.avif 800w, /img/imoveis/07-apto-vila-amelia-1-1200.avif 1200w, /img/imoveis/07-apto-vila-amelia-1-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/07-apto-vila-amelia-2-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Sala de jantar com mesa redonda, cadeiras e janela",
+      "srcSetWebp": "/img/imoveis/07-apto-vila-amelia-2-480.webp 480w, /img/imoveis/07-apto-vila-amelia-2-800.webp 800w, /img/imoveis/07-apto-vila-amelia-2-1200.webp 1200w, /img/imoveis/07-apto-vila-amelia-2-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/07-apto-vila-amelia-2-480.avif 480w, /img/imoveis/07-apto-vila-amelia-2-800.avif 800w, /img/imoveis/07-apto-vila-amelia-2-1200.avif 1200w, /img/imoveis/07-apto-vila-amelia-2-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/07-apto-vila-amelia-3-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Cozinha com armários de madeira clara, ilha e banquetas",
+      "srcSetWebp": "/img/imoveis/07-apto-vila-amelia-3-480.webp 480w, /img/imoveis/07-apto-vila-amelia-3-800.webp 800w, /img/imoveis/07-apto-vila-amelia-3-1200.webp 1200w, /img/imoveis/07-apto-vila-amelia-3-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/07-apto-vila-amelia-3-480.avif 480w, /img/imoveis/07-apto-vila-amelia-3-800.avif 800w, /img/imoveis/07-apto-vila-amelia-3-1200.avif 1200w, /img/imoveis/07-apto-vila-amelia-3-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/07-apto-vila-amelia-4-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Banheiro com banheira, vaso e gabinete de madeira clara",
+      "srcSetWebp": "/img/imoveis/07-apto-vila-amelia-4-480.webp 480w, /img/imoveis/07-apto-vila-amelia-4-800.webp 800w, /img/imoveis/07-apto-vila-amelia-4-1200.webp 1200w, /img/imoveis/07-apto-vila-amelia-4-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/07-apto-vila-amelia-4-480.avif 480w, /img/imoveis/07-apto-vila-amelia-4-800.avif 800w, /img/imoveis/07-apto-vila-amelia-4-1200.avif 1200w, /img/imoveis/07-apto-vila-amelia-4-1600.avif 1600w"
+    }
+  ],
+  "imoveis/08-apto-calmon-viana": [
+    {
+      "src": "/img/imoveis/08-apto-calmon-viana-1-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Fachada de prédio residencial de tijolinho com varandas e árvores",
+      "srcSetWebp": "/img/imoveis/08-apto-calmon-viana-1-480.webp 480w, /img/imoveis/08-apto-calmon-viana-1-800.webp 800w, /img/imoveis/08-apto-calmon-viana-1-1200.webp 1200w, /img/imoveis/08-apto-calmon-viana-1-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/08-apto-calmon-viana-1-480.avif 480w, /img/imoveis/08-apto-calmon-viana-1-800.avif 800w, /img/imoveis/08-apto-calmon-viana-1-1200.avif 1200w, /img/imoveis/08-apto-calmon-viana-1-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/08-apto-calmon-viana-2-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Sala de estar com parede verde-clara, sofá e mesa de jantar ao fundo",
+      "srcSetWebp": "/img/imoveis/08-apto-calmon-viana-2-480.webp 480w, /img/imoveis/08-apto-calmon-viana-2-800.webp 800w, /img/imoveis/08-apto-calmon-viana-2-1200.webp 1200w, /img/imoveis/08-apto-calmon-viana-2-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/08-apto-calmon-viana-2-480.avif 480w, /img/imoveis/08-apto-calmon-viana-2-800.avif 800w, /img/imoveis/08-apto-calmon-viana-2-1200.avif 1200w, /img/imoveis/08-apto-calmon-viana-2-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/08-apto-calmon-viana-3-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Quarto com cama de casal, roupa de cama branca e parede verde-clara",
+      "srcSetWebp": "/img/imoveis/08-apto-calmon-viana-3-480.webp 480w, /img/imoveis/08-apto-calmon-viana-3-800.webp 800w, /img/imoveis/08-apto-calmon-viana-3-1200.webp 1200w, /img/imoveis/08-apto-calmon-viana-3-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/08-apto-calmon-viana-3-480.avif 480w, /img/imoveis/08-apto-calmon-viana-3-800.avif 800w, /img/imoveis/08-apto-calmon-viana-3-1200.avif 1200w, /img/imoveis/08-apto-calmon-viana-3-1600.avif 1600w"
+    },
+    {
+      "src": "/img/imoveis/08-apto-calmon-viana-4-1600.webp",
+      "largura": 1600,
+      "altura": 1066,
+      "alt": "Cozinha branca planejada com janela e parede verde-clara",
+      "srcSetWebp": "/img/imoveis/08-apto-calmon-viana-4-480.webp 480w, /img/imoveis/08-apto-calmon-viana-4-800.webp 800w, /img/imoveis/08-apto-calmon-viana-4-1200.webp 1200w, /img/imoveis/08-apto-calmon-viana-4-1600.webp 1600w",
+      "srcSetAvif": "/img/imoveis/08-apto-calmon-viana-4-480.avif 480w, /img/imoveis/08-apto-calmon-viana-4-800.avif 800w, /img/imoveis/08-apto-calmon-viana-4-1200.avif 1200w, /img/imoveis/08-apto-calmon-viana-4-1600.avif 1600w"
+    }
+  ],
+  "bairros/bairro-calmon-viana": [
+    {
+      "src": "/img/bairros/bairro-calmon-viana-640.webp",
+      "largura": 640,
+      "altura": 533,
+      "alt": "Entrada da estação Calmon Viana da CPTM, em Poá",
+      "srcSetWebp": "/img/bairros/bairro-calmon-viana-400.webp 400w, /img/bairros/bairro-calmon-viana-640.webp 640w",
+      "srcSetAvif": "/img/bairros/bairro-calmon-viana-400.avif 400w, /img/bairros/bairro-calmon-viana-640.avif 640w"
+    }
+  ],
+  "bairros/bairro-centro": [
+    {
+      "src": "/img/bairros/bairro-centro-640.webp",
+      "largura": 640,
+      "altura": 533,
+      "alt": "Casa histórica do museu ao lado da linha de trem no centro de Poá",
+      "srcSetWebp": "/img/bairros/bairro-centro-400.webp 400w, /img/bairros/bairro-centro-640.webp 640w",
+      "srcSetAvif": "/img/bairros/bairro-centro-400.avif 400w, /img/bairros/bairro-centro-640.avif 640w"
+    }
+  ],
+  "bairros/bairro-jardim-america": [
+    {
+      "src": "/img/bairros/bairro-jardim-america-640.webp",
+      "largura": 640,
+      "altura": 533,
+      "alt": "Rua ensolarada e arborizada com casas baixas",
+      "srcSetWebp": "/img/bairros/bairro-jardim-america-400.webp 400w, /img/bairros/bairro-jardim-america-640.webp 640w",
+      "srcSetAvif": "/img/bairros/bairro-jardim-america-400.avif 400w, /img/bairros/bairro-jardim-america-640.avif 640w"
+    }
+  ],
+  "bairros/bairro-vila-amelia": [
+    {
+      "src": "/img/bairros/bairro-vila-amelia-640.webp",
+      "largura": 640,
+      "altura": 533,
+      "alt": "Casas e sobrados entre árvores em bairro residencial",
+      "srcSetWebp": "/img/bairros/bairro-vila-amelia-400.webp 400w, /img/bairros/bairro-vila-amelia-640.webp 640w",
+      "srcSetAvif": "/img/bairros/bairro-vila-amelia-400.avif 400w, /img/bairros/bairro-vila-amelia-640.avif 640w"
+    }
+  ],
+  "bairros/bairro-vila-julia": [
+    {
+      "src": "/img/bairros/bairro-vila-julia-640.webp",
+      "largura": 640,
+      "altura": 533,
+      "alt": "Sobrados coloridos e árvores em rua de bairro",
+      "srcSetWebp": "/img/bairros/bairro-vila-julia-400.webp 400w, /img/bairros/bairro-vila-julia-640.webp 640w",
+      "srcSetAvif": "/img/bairros/bairro-vila-julia-400.avif 400w, /img/bairros/bairro-vila-julia-640.avif 640w"
+    }
+  ],
+  "bairros/bairro-vila-perracini": [
+    {
+      "src": "/img/bairros/bairro-vila-perracini-640.webp",
+      "largura": 640,
+      "altura": 533,
+      "alt": "Rua residencial com árvore grande, muros e casas baixas",
+      "srcSetWebp": "/img/bairros/bairro-vila-perracini-400.webp 400w, /img/bairros/bairro-vila-perracini-640.webp 640w",
+      "srcSetAvif": "/img/bairros/bairro-vila-perracini-400.avif 400w, /img/bairros/bairro-vila-perracini-640.avif 640w"
+    }
+  ],
+  "extras/contato": [
+    {
+      "src": "/img/extras/contato-1280.webp",
+      "largura": 1280,
+      "altura": 960,
+      "alt": "Sala de jantar com mesa redonda para seis, pendente e janelas amplas com vista da cidade",
+      "srcSetWebp": "/img/extras/contato-640.webp 640w, /img/extras/contato-960.webp 960w, /img/extras/contato-1280.webp 1280w",
+      "srcSetAvif": "/img/extras/contato-640.avif 640w, /img/extras/contato-960.avif 960w, /img/extras/contato-1280.avif 1280w"
+    }
+  ],
+  "extras/por-que-fundo": [
+    {
+      "src": "/img/extras/por-que-fundo-1600.webp",
+      "largura": 1600,
+      "altura": 1200,
+      "alt": "",
+      "srcSetWebp": "/img/extras/por-que-fundo-960.webp 960w, /img/extras/por-que-fundo-1600.webp 1600w",
+      "srcSetAvif": "/img/extras/por-que-fundo-960.avif 960w, /img/extras/por-que-fundo-1600.avif 1600w"
+    }
+  ]
+}

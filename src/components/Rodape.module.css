@@ -1,0 +1,128 @@
+.rodape {
+  background: var(--preto);
+  color: var(--cinza-claro);
+  font-size: 0.9375rem;
+  padding-top: clamp(64px, 6vw, 88px);
+}
+.grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr) minmax(0, 0.8fr) minmax(0, 1.1fr);
+  gap: 40px clamp(28px, 4vw, 64px);
+}
+.marca img {
+  width: 233px;
+  height: auto;
+}
+.marca p {
+  max-width: 24rem;
+  margin-top: 22px;
+  line-height: 1.65;
+}
+.redes {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+.redes a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--grafite);
+  color: var(--branco);
+  transition:
+    border-color var(--medio),
+    color var(--medio),
+    transform var(--medio) var(--ease-out);
+}
+.redes svg {
+  width: 20px;
+  height: 20px;
+}
+.tituloColuna {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding-bottom: 6px;
+  font-family: var(--fonte-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--branco);
+  background: linear-gradient(var(--ciano), var(--ciano)) left bottom / 100% 2px no-repeat;
+}
+.coluna ul {
+  display: grid;
+  gap: 4px;
+}
+.coluna a {
+  display: inline-block;
+  padding-block: 4px;
+  transition: color var(--rapido);
+}
+.contatos li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-block: 4px;
+}
+.contatos li > a {
+  padding: 0;
+}
+.contatos svg {
+  width: 19px;
+  height: 19px;
+  flex: none;
+  margin-top: 2px;
+  color: var(--ciano);
+}
+@media (hover: hover) {
+  .coluna a:hover {
+    color: var(--branco);
+  }
+  .redes a:hover {
+    border-color: var(--ciano);
+    color: var(--ciano);
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+.base {
+  /* folga pro botão flutuante do WhatsApp não cobrir o link da política */
+  padding-right: max(var(--gutter), 84px) !important;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px 24px;
+  flex-wrap: wrap;
+  margin-top: clamp(48px, 5vw, 72px);
+  padding-block: 26px 30px;
+  border-top: 1px solid var(--grafite);
+  font-size: 0.8125rem;
+}
+.base a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgb(167 176 181 / 0.5);
+}
+
+@media (max-width: 1023px) {
+  .grade {
+    grid-template-columns: 1fr 1fr;
+  }
+  .marca {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 560px) {
+  .grade {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 20px;
+  }
+  .grade > .coluna:last-child {
+    grid-column: 1 / -1;
+  }
+  .base {
+    flex-direction: column;
+  }
+}

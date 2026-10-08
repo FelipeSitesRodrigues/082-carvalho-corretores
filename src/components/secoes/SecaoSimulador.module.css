@@ -1,0 +1,22 @@
+.secao {
+  padding-block: clamp(64px, 6.4vw, 96px);
+}
+.grade {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  /* topo, como no mockup: o resultado abre embaixo sem empurrar o título */
+  align-items: start;
+  gap: 40px clamp(40px, 6vw, 104px);
+}
+.texto {
+  max-width: 30rem;
+  margin-top: 18px;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: rgb(11 13 14 / 0.86);
+}
+@media (max-width: 999px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+}

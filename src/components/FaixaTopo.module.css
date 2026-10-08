@@ -1,0 +1,62 @@
+.faixa {
+  position: relative;
+  padding: calc(88px + clamp(36px, 4vw, 56px)) 0 clamp(104px, 9vw, 128px);
+  background: var(--preto);
+  overflow: hidden;
+}
+.faixa[data-compacta] {
+  padding-bottom: clamp(48px, 5vw, 64px);
+}
+.trilha ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-size: 0.875rem;
+  color: var(--cinza-claro);
+}
+.trilha li {
+  display: inline-flex;
+  gap: 8px;
+}
+.trilha a {
+  transition: color var(--rapido);
+}
+.trilha a:hover {
+  color: var(--branco);
+}
+.trilha [aria-current] {
+  color: var(--branco);
+}
+.titulo {
+  max-width: 22ch;
+  font-size: clamp(2rem, 3.6vw, 3.25rem);
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+}
+.texto {
+  max-width: 40rem;
+  margin-top: 16px;
+  font-size: 1.0625rem;
+  color: var(--cinza-claro);
+}
+@media (max-width: 1099px) {
+  .faixa {
+    padding-top: calc(72px + 32px);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .titulo,
+  .texto {
+    animation: subir 820ms var(--ease-out) both;
+  }
+  .texto {
+    animation-delay: 120ms;
+  }
+}
+@keyframes subir {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+}

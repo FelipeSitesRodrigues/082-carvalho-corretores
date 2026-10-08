@@ -1,0 +1,33 @@
+.texto {
+  max-width: calc(46rem + var(--gutter) * 2);
+  padding-block: clamp(48px, 5vw, 72px) var(--secao-y);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #2f373b;
+}
+.texto h2 {
+  margin: 40px 0 10px;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--preto);
+}
+.texto p + p {
+  margin-top: 14px;
+}
+.data {
+  margin-top: 48px !important;
+  font-size: 0.875rem;
+  color: var(--cinza-medio);
+}
+.creditos {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  padding-left: 18px;
+  font-size: 0.9375rem;
+}
+.creditos a {
+  color: var(--ciano-escuro);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

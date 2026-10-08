@@ -1,0 +1,228 @@
+/* ===================================================================== hero
+   Computador: a foto é absoluta em relação à seção, à direita, e o texto fica
+   por cima da metade escura. Celular: a foto vira uma área do grid entre o
+   título e o texto (regra da casa), sangrando na largura. */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--preto);
+}
+
+.conteudo {
+  display: grid;
+  grid-template-areas:
+    'titulo'
+    'texto'
+    'botoes'
+    'infos';
+  align-content: end;
+  min-height: clamp(660px, 50vw, 860px);
+  padding-top: calc(88px + clamp(48px, 6vw, 96px));
+  padding-bottom: clamp(36px, 3.6vw, 52px);
+}
+
+.titulo {
+  grid-area: titulo;
+  font-size: clamp(2.9rem, 4.3vw, 4.125rem);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+.linha {
+  display: block;
+}
+
+.texto {
+  grid-area: texto;
+  max-width: 34rem;
+  margin-top: clamp(20px, 2vw, 28px);
+  font-size: clamp(1.0625rem, 1.25vw, 1.1875rem);
+  line-height: 1.6;
+  color: rgb(255 255 255 / 0.84);
+}
+
+.botoes {
+  grid-area: botoes;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: clamp(28px, 2.6vw, 36px);
+}
+.botoes :global(.botao) {
+  --altura: 60px;
+  padding-inline: 30px;
+}
+
+.infos {
+  grid-area: infos;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+  gap: 20px clamp(28px, 4.4vw, 72px);
+  margin-top: clamp(40px, 5vw, 72px);
+}
+.infos li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--cinza-claro);
+}
+.infos strong {
+  display: block;
+  font-weight: 600;
+  color: var(--branco);
+}
+.infoIcone {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  color: var(--ciano);
+  stroke-width: 1.5;
+}
+
+/* ------------------------------------------------------------- foto */
+.foto {
+  position: absolute;
+  inset: 0 0 0 30%;
+  z-index: -1;
+}
+.foto picture,
+.foto img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+.foto img {
+  object-fit: cover;
+  object-position: 62% 50%;
+}
+/* véus: esquerda (onde mora o texto), topo (cabeçalho) e base (informações) */
+.foto::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--preto) 0%, rgb(11 13 14 / 0.86) 9%, rgb(11 13 14 / 0.45) 26%, rgb(11 13 14 / 0) 48%),
+    linear-gradient(180deg, rgb(11 13 14 / 0.7) 0%, rgb(11 13 14 / 0) 22%),
+    linear-gradient(0deg, rgb(11 13 14 / 0.78) 0%, rgb(11 13 14 / 0) 34%);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------- abertura
+   Só transform e opacity, tudo parado antes de ~1,1 s no celular (TBT e
+   Speed Index: memória animacao-abertura-tbt). A foto não anima no celular:
+   ela é o LCP. */
+@media (prefers-reduced-motion: no-preference) {
+  .linha,
+  .texto,
+  .botoes,
+  .infos {
+    animation: subir 900ms var(--ease-out) both;
+  }
+  .linha {
+    animation-delay: calc(60ms + var(--i) * 80ms);
+  }
+  .texto {
+    animation-delay: 320ms;
+  }
+  .botoes {
+    animation-delay: 400ms;
+  }
+  .infos {
+    animation-delay: 480ms;
+  }
+}
+@keyframes subir {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+}
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .foto img {
+    animation: assentar 1800ms var(--ease-out) both;
+  }
+}
+@keyframes assentar {
+  from {
+    transform: scale(1.06);
+  }
+}
+
+/* ------------------------------------------------------- telas médias */
+@media (max-width: 1199px) and (min-width: 900px) {
+  .infos {
+    grid-template-columns: repeat(2, auto);
+  }
+  .foto {
+    inset: 0 0 0 18%;
+  }
+}
+
+/* ------------------------------------------------------------ celular */
+@media (max-width: 899px) {
+  .conteudo {
+    grid-template-areas:
+      'titulo'
+      'foto'
+      'texto'
+      'botoes'
+      'infos';
+    min-height: 0;
+    align-content: start;
+    padding-top: calc(72px + 28px);
+    padding-bottom: 44px;
+  }
+  .titulo {
+    font-size: clamp(1.85rem, 9.1vw, 3.2rem);
+  }
+  .foto {
+    position: relative;
+    inset: auto;
+    z-index: 0;
+    grid-area: foto;
+    margin: 22px calc(var(--gutter) * -1) 0;
+    aspect-ratio: 4 / 5;
+    max-height: 70svh;
+  }
+  .foto::after {
+    background:
+      linear-gradient(180deg, var(--preto) 0%, rgb(11 13 14 / 0) 14%),
+      linear-gradient(0deg, var(--preto) 0%, rgb(11 13 14 / 0.55) 16%, rgb(11 13 14 / 0) 38%);
+  }
+  .texto {
+    position: relative;
+    margin-top: -18px;
+  }
+  .botoes {
+    flex-direction: column;
+  }
+  .botoes :global(.botao) {
+    width: 100%;
+    --altura: 56px;
+  }
+  .infos {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 16px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--grafite);
+  }
+  .infos li {
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 0.8125rem;
+  }
+  .infos strong {
+    white-space: nowrap;
+    font-size: 0.875rem;
+  }
+  .infoIcone {
+    width: 26px;
+    height: 26px;
+  }
+}

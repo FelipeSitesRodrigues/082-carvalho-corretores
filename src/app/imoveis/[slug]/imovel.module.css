@@ -1,0 +1,240 @@
+.pagina {
+  padding-top: clamp(28px, 3vw, 40px);
+}
+.grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
+  align-items: start;
+  gap: 40px clamp(32px, 4vw, 64px);
+  margin-top: clamp(28px, 3vw, 44px);
+  padding-bottom: clamp(56px, 6vw, 88px);
+}
+
+/* ----------------------------------------------------------------- ficha */
+.ficha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  border-radius: var(--raio-card);
+  background: var(--branco);
+  border: 1px solid var(--fio);
+  overflow: hidden;
+}
+.ficha li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  align-items: center;
+  padding: 18px 20px;
+  border-right: 1px solid var(--fio);
+  margin-right: -1px;
+}
+.ficha svg {
+  grid-row: 1 / 3;
+  width: 26px;
+  height: 26px;
+  color: var(--ciano-escuro);
+  stroke-width: 1.6;
+}
+.ficha strong {
+  font-family: var(--fonte-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.ficha span {
+  font-size: 0.8125rem;
+  color: var(--cinza-medio);
+}
+
+/* ------------------------------------------------------------ blocos */
+.bloco {
+  margin-top: clamp(36px, 4vw, 52px);
+}
+.bloco h2 {
+  margin-bottom: 14px;
+  font-size: 1.375rem;
+  letter-spacing: -0.015em;
+}
+.bloco p {
+  max-width: 68ch;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #2f373b;
+}
+.bloco :global(.link-seta) {
+  margin-top: 18px;
+}
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px 24px;
+}
+/* marcador: a janela quadrada do logo */
+.lista li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+}
+.lista li::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  flex: none;
+  background: var(--ciano-escuro);
+}
+
+/* ----------------------------------------------------------- lateral */
+.lateral {
+  position: sticky;
+  top: 112px;
+}
+.cartao {
+  padding: clamp(22px, 2.2vw, 30px);
+  border-radius: 12px;
+  background: var(--branco);
+  border: 1px solid var(--fio);
+  box-shadow: 0 30px 60px -40px rgb(11 13 14 / 0.45);
+}
+.finalidade {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cinza-medio);
+}
+.preco {
+  margin-top: 6px;
+  font-family: var(--fonte-display);
+  font-size: clamp(2rem, 2.6vw, 2.375rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--ciano-escuro);
+  font-variant-numeric: tabular-nums;
+}
+.preco span {
+  font-size: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.custos {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--fio);
+  font-size: 0.9375rem;
+}
+.custos div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.custos dt {
+  color: var(--cinza-medio);
+}
+.custos dd {
+  margin: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.total {
+  padding-top: 8px;
+  border-top: 1px dashed var(--fio);
+}
+.total dt {
+  color: var(--preto);
+  font-weight: 600;
+}
+.acoes {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+.acoes :global(.botao) {
+  width: 100%;
+}
+.visita:global(.botao) {
+  border-color: var(--preto);
+  color: var(--preto);
+}
+@media (hover: hover) {
+  .visita:global(.botao):hover {
+    background: var(--preto);
+    color: var(--branco);
+  }
+}
+.simular {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--ciano-escuro);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+.simular svg {
+  width: 18px;
+  height: 18px;
+}
+.codigo {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--fio);
+  font-size: 0.8125rem;
+  color: var(--cinza-medio);
+  text-align: center;
+}
+.codigo strong {
+  color: var(--preto);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------- parecidos */
+.parecidos {
+  padding: clamp(56px, 6vw, 88px) 0 var(--secao-y);
+  border-top: 1px solid var(--fio);
+  background: var(--branco);
+}
+.gradeParecidos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+}
+
+@media (max-width: 1099px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+  .lateral {
+    position: static;
+    order: -1;
+  }
+  .gradeParecidos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .ficha {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ficha li {
+    border-bottom: 1px solid var(--fio);
+    margin-bottom: -1px;
+  }
+  .gradeParecidos {
+    grid-template-columns: 1fr;
+  }
+  /* no celular, dois bastam: o resto está em "Ver todos os imóveis" */
+  .gradeParecidos > li:nth-child(n + 3) {
+    display: none;
+  }
+}
